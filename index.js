@@ -109,6 +109,10 @@ app.delete("/destinations/:id", verifyToken, async (req, res) => {
   res.send("Destination Deleted Successfully");
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running at PORT ${PORT}`);
-});
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`Server is running at PORT ${PORT}`);
+  });
+}
+
+export default app;
