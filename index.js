@@ -112,3 +112,5 @@ app.delete("/destinations/:id", verifyToken, async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running at PORT ${PORT}`);
 });
+
+export default app
