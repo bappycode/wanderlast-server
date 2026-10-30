@@ -49,7 +49,7 @@ const destinationCollection = db.collection("destination");
 const myBookingsColection = db.collection("My-Bookings");
 
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  res.send({message: "Server Is Running Perfectly"});
 });
 
 app.post("/add-destination", verifyToken, async (req, res) => {
